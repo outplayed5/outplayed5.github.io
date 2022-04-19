@@ -1,0 +1,71 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+<script>
+var i=0;
+function func_yes(){
+
+//ветка да
+if(i==0){
+document.getElementById("que").innerHTML="<big>Преподаватель отправил ученикам ссылку на занятие?";
+
+}
+
+if(i==1){
+document.getElementById("que").innerHTML="<big>Необходимо отметиться в боте<br>Преподаватель отправил ученикам ссылку на занятие?";
+i=0;
+
+}
+
+
+if(i==2){
+document.getElementById("que").innerHTML="<big>Урок состоялся";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+}
+
+
+i=i+2;
+}
+function func_no(){
+//ветка "нет" 
+if(i==0){
+document.getElementById("que").innerHTML="<big>Тимлид звонит П<br>Преподаватель ответил?";
+
+}
+if(i==1){
+document.getElementById("que").innerHTML="<big>Тимлид ищет замену<br>Урок состоялся";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+
+}
+if(i==2){
+document.getElementById("que").innerHTML="<big>Необходимо отправить ссылку<br>Урок состоялся";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+}
+
+
+
+i=i+1;
+}
+</script>
+</head>
+<body style="font-family: 'Noto Sans', sans-serif;"
+ style="font-family: 'Source Sans Pro', sans-serif;">
+<h1><center>Готовность к занятию</center></h1>
+<p id="que">
+<big>
+Преподаватель отметился в телеграмм боте?</big>
+</p>
+<div id="main">
+<button id="but1" onclick="func_yes()"><big>Да</button>
+<button id="but2" onclick="func_no()">Нет</big></button><br><br>
+
+<a href="func.html"> <big> ⤶ Назад </big></a><br><br>
+<a href="index.html"> <big> ⤶ Назад к главному меню </big></a>
+</div>
+</body>
+</html>

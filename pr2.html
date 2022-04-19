@@ -1,0 +1,61 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital@0;1&family=Source+Sans+Pro:wght@300;700&display=swap" rel="stylesheet">
+<script>
+var i=0;
+function func_yes(){
+//ветка да
+if(i==0){
+document.getElementById("que").innerHTML="<big>Отмечаем в бэкофисе отстуствие по уважительной причине<br>Конец";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+}
+
+if(i==1){
+document.getElementById("que").innerHTML="<big>Приглашаем на занятие<br>Конец";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+
+}
+
+
+
+i=i+1;
+}
+function func_no(){
+//ветка "нет" 
+if(i==0){
+document.getElementById("que").innerHTML="<big>Передаем вопрос ТП, звонят ученику<br>Взял трубку?";
+
+}
+if(i==1){
+document.getElementById("que").innerHTML="<big>Отмечаем прогул<br>Конец";
+document.getElementById("but1").style.visibility="hidden";
+document.getElementById("but2").style.visibility="hidden";
+
+}
+
+
+i=i+1;
+}
+</script>
+</head>
+<body style="font-family: 'Noto Sans', sans-serif;"
+ style="font-family: 'Source Sans Pro', sans-serif;">
+<h1><center>Отсутствие ученика на уроке</center></h1>
+<p id="que">
+<big>Начался урок, ученика нет</big>
+<br>
+<big>Ученик писал, что его не будет по уважительной причине?</big>
+</p>
+<div id="main">
+<button id="but1" onclick="func_yes()"><big>Да</button>
+<button id="but2" onclick="func_no()">Нет</big></button><br><br>
+
+<a href="func.html"> <big> ⤶ Назад </big></a><br><br>
+<a href="index.html"> <big> ⤶ Назад к главному меню </big></a>
+</div>
+</body>
+</html>
